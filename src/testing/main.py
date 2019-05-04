@@ -1,7 +1,7 @@
-
+from img_preprocessing import crop_all_center
 
 def main():
-    pass
+    crop_all_center('data/video/vid1_short', 'data/video/vid1_short_cropped')
 
 
 if __name__ == "__main__":
