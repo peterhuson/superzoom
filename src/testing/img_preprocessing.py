@@ -22,7 +22,7 @@ def crop_all_center(dir_path, save_to):
 	"""
 
 	half_w = 300
-	half_h = 100
+	half_h = 100 
 	for filename in glob.glob(dir_path + '/*.jpg'):
 		head, tail = os.path.split(filename)
 		im = Image.open(filename)
