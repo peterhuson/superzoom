@@ -9,7 +9,7 @@ from PIL import Image
 import glob, os
 
 
-def crop_all_center(dir_path, save_to):
+def crop_all_center(dir_path, save_to, half_w, half_h):
 	"""
 	Crops all images in the given directory from the center.
 	We want to get a smaller, lower-res image from the larger images so we can run it through
@@ -20,9 +20,6 @@ def crop_all_center(dir_path, save_to):
 	:param save_to: Path where we want to save the cropped images (under the same name)
 	:return: None
 	"""
-
-	half_w = 300
-	half_h = 100
 	for filename in glob.glob(dir_path + '/*.jpg'):
 		head, tail = os.path.split(filename)
 		im = Image.open(filename)
