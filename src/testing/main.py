@@ -1,13 +1,15 @@
-from img_preprocessing import crop_all_center
+from img_preprocessing import crop_all_center, get_time_slices
 
 def main():
 
     # small video of road
     # crop_all_center('data/video/vid1_short', 'data/video/vid1_short_cropped', 300, 100)
-    crop_all_center('data/video/vid1_short', 'data/video/vid1_short_cropped', 300, 100)
+    # crop_all_center('data/video/vid1_short', 'data/video/vid1_short_cropped', 300, 100)
+	#
+    # # larger video of road
+    # crop_all_center('data/video/vid1_short', 'data/video/vid1_round2_cropped', 600, 200)
 
-    # larger video of road
-    crop_all_center('data/video/vid1_short', 'data/video/vid1_round2_cropped', 600, 200)
+    get_time_slices('data/video/low_fps', 'data/video/time_slices')
 
 
 if __name__ == "__main__":
