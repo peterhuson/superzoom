@@ -50,8 +50,8 @@ def get_time_slices(dir_path, save_to):
 	dim2 = all_imgs[0].shape[1]
 	stack = np.array(all_imgs).reshape((len(all_imgs), dim1, dim2))
 
-	for i in range(dim2):
-		time_slice = stack[:, :, i]
+	for i in range(dim1):
+		time_slice = stack[:, i, :]
 		img = Image.fromarray(time_slice, 'L')
 		img.save(save_to + '/' + 'time_slice_{:04}'.format(i) + '.png')
 
