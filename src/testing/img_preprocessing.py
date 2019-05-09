@@ -51,7 +51,12 @@ def get_time_slices(dir_path, save_to):
 	stack = np.array(all_imgs).reshape((len(all_imgs), dim1, dim2))
 
 	for i in range(dim1):
+		# uncomment one of the blocks below
+		# converting from image frames to time slices
+		# time_slice = stack[:, :, i]
+		# converting from time slices to image frames
 		time_slice = stack[:, i, :]
+
 		img = Image.fromarray(time_slice, 'L')
 		img.save(save_to + '/' + 'time_slice_{:04}'.format(i) + '.png')
 
