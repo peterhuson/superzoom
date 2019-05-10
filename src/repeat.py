@@ -56,9 +56,6 @@ def parse_args(input_folder, output_folder):
 
     return args
 
-
-    
-    
     
 def run_single(input_folder, output_folder):
     # Parse command-line arguments
@@ -88,7 +85,6 @@ def run_single(input_folder, output_folder):
     if torch.cuda.is_available() and not args.cpu:
         model = model.cuda()
 
-    # TODO Change
     dataset = Dataset(
         Phase.TEST,
         args.input,
