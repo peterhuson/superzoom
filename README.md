@@ -21,3 +21,6 @@ http://www.vision.ee.ethz.ch/~timofter/publications/Agustsson-CVPRW-2017.pdf
 
 State of the art paper (2018): 
 https://igl.ethz.ch/projects/prosr/
+
+
+### Methods and results are in final report.
